@@ -1,0 +1,4 @@
+const closureExample= outerFunction();
+// closureExample();
+
+

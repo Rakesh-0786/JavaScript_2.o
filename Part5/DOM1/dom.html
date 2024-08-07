@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="one"><span>Hello</span>Namaste</p>
+    <ul>
+        <li class="tech">One</li>
+        <li class="tech">Two</li>
+        <li class="tech">Three</li>
+    </ul>
+
+    <!-- tagname -->
+     <h4>Hey</h4>
+     <h4>Namaste</h4>
+     <h4>Hola</h4>
+
+     <!-- Query Selectors -->
+      <h2>Hello</h2>
+      <h2 class="classs">Hola</h2>
+      <h2 id="ids">Hey</h2>
+
+    <script>
+       let var1= document.getElementById('one');
+        // console.log(var1.innerText);
+        console.log(var1.innerHTML)
+
+        let var2=document.getElementsByClassName('tech');
+        // console.log(var2); //this print the whole class
+        console.log(var2[2].innerText); //for one specific list
+        // manipulate
+        var2[1].innerText="Nodejs";
+
+        // tagname
+        let var3=document.getElementsByTagName('h4');
+        console.log(var3[1].innerText);
+        var3[2].innerText="Hello World!";
+        var3[2].style.color="green"
+
+
+        // Query Selectors
+        let var4=document.querySelector('#ids');
+        console.log(var4);
+        var4.className='hello'; //classname used for manipulate or updating the one class
+
+        var4.classList='hello helo hola';  //classList used for manipulating or updating the multiple class
+        
+        // attribute set takes two input one for name of the attribute and the other is the value of the attributes
+        var4.setAttribute('id', 'js');
+
+    </script>
+</body>
+</html>

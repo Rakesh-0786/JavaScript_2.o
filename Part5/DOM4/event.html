@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Event is an  Action that occurs into the webpages</h1>  -->
+<h1>Event</h1>
+<button id="myButton">Click Me!</button>
+</body>
+<script>
+    var button=document.getElementById('myButton');
+    // addEventListener takes lots of input first take the elements that are target and second take the event that adding and the third one is function calling
+    // button.addEventListener('click',() => {
+    //     // console.log(button.style.color='green');
+    //     alert("Button Clicked")
+    // })
+
+    // Another methods:
+    var button=document.getElementById('myButton');
+    function handleClick(){
+        // console.log(button.style.color="yellow");
+        alert("Hey this is Rakesh-kumar")
+    }
+    button.addEventListener('click', handleClick)
+    // we can also add the method that run only the specific times
+    button.addEventListener('click', handleClick, {once:true});
+
+    // this addEventLister causes the memory lickage if the multiple users click this button 
+    // so prevents from the memory lickage we can use the clear function with setTimeout
+
+    setTimeout(() => {
+        button.removeEventListener('click',handleClick)
+    },3000)
+
+</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM selectors</title>
+    <style>
+        .highlight{
+            background-color: #048b8f;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Selectors</h1>
+<p id="myParagraph">This is a Paragraph with dummy text</p>  
+<span id="hi">Hello</span>
+<ul>
+    <li class="listItem">Item 1</li>
+    <li class="listItem">Item 2</li>
+    <li class="listItem">Item 3</li>
+    <li class="listItem">Item 4</li>
+</ul>  
+</body>
+<script>
+    // Select elements using different DOM Selectors
+    // console.log(document.getElementById('myParagraph'));
+    // console.log(document.getElementById('hi'));
+
+
+    const paragraph=document.getElementById('myParagraph');
+
+    const listItems= document.getElementsByClassName('listItem');
+    
+    // We can also selects the elements with querySelectors in which elements are selected in the form of CSS based selectors.
+    const allListItems=document.querySelectorAll('.listItem');
+
+    // if we want to selects the one elements then we can simply use the querySelector only.
+    const spamItem= document.querySelector('#hi');
+
+    // tagname selects the all elements present in the html with the same name.
+    const targetAllListItems=document.getElementsByTagName('li');
+    console.log(targetAllListItems);
+
+    // If the all elements are with the same name and if we want to select the only first elements then js Dom the only elements by default.
+    const firstListItem=document.querySelector('.listItem')
+    paragraph.addEventListener('click', () => {
+        paragraph.classList.toggle('highlight')
+    })
+    // console.log(listItems);
+    console.log(allListItems);
+
+    spamItem.style.color='red';
+    console.log(firstListItem);
+    firstListItem.textContent="Updated Item"
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+<h1>HEllo World!</h1>
+<p id="js"></p>
+<button onclick="hey()" id="jss">Submit</button>
+
+    <script>
+        // add event on the whole webpages when the user click anywhere in the web pages
+        document.addEventListener('click', () => {
+            document.getElementById('js').innerText="Namaste From Rakesh!";
+        });
+    function hey() {
+            document.getElementById('jss').innerText="Namaste";
+            document.getElementById('jss').style.color="red";
+            document.getElementById('jss').style.backgroundColor="black";
+            document.getElementById('jss').style.padding="16px";
+            document.getElementById('jss').style.border="2px solid yellow";
+        }
+
+    </script>
+</body>
+</html>
